@@ -1,0 +1,31 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# .NET source files - cross-platform LF (Git auto-converts to CRLF on Windows)
+*.cs text eol=lf
+*.sln text eol=lf
+*.csproj text eol=lf
+*.props text eol=lf
+*.config text eol=lf
+*.json text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Unix scripts
+*.sh text eol=lf
+
+# Windows batch files
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.exe binary
+*.dll binary
+*.pdb binary
+*.pfx binary
+
+# Generated files
+*.generated.cs linguist-generated=true
+*.designer.cs linguist-generated=true
