@@ -1,0 +1,27 @@
+---
+description: Modern C# features and code quality patterns for library development
+alwaysApply: true
+---
+
+# Code Quality Standards
+
+## Modern C# Features
+- Use records for immutable data structures
+- Leverage pattern matching and switch expressions
+- Apply nullable reference types consistently
+- Use `ArgumentNullException.ThrowIfNull()` for validation
+- Apply `sealed` keyword to classes not designed for inheritance
+
+## Error Handling Patterns
+- Use specific exception types with meaningful context (never generic Exception)
+- Implement Result<T> pattern for expected failures (parsing, validation)
+- Include comprehensive error handling in all public methods
+- Provide actionable error messages with suggestions for resolution
+- Log security-relevant events for audit trails
+
+## Method Design
+- Keep methods simple with single responsibility (max 10-15 lines for business logic)
+- Extract complex logic into smaller, testable methods
+- Use meaningful, intention-revealing names for methods and variables
+- Ensure proper resource disposal with `using` statements or `IDisposable`
+- Validate all parameters with `ArgumentNullException.ThrowIfNull()` where appropriate

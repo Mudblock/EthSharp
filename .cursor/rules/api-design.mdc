@@ -1,0 +1,51 @@
+---
+description: Public API design principles for intuitive library interfaces
+alwaysApply: true
+---
+
+# API Design Principles
+
+## Interface Design & SOLID Principles
+- **Single Responsibility**: Each interface/class should have one reason to change
+- **Open/Closed**: Open for extension, closed for modification through composition
+- **Liskov Substitution**: Subtypes must be substitutable for base types
+- **Interface Segregation**: Create focused, cohesive interfaces following single responsibility
+- **Dependency Inversion**: Depend on abstractions, not concretions
+- Use meaningful names that clearly express intent and enable IntelliSense discoverability
+- Prefer composition over inheritance for flexible, testable designs
+- Keep interface surface area minimal and focused on core responsibilities
+
+## Fluent APIs
+- Design method chaining where it improves readability
+- Return interface types to maintain fluency
+- Use builder patterns for complex object construction
+- Ensure fluent chains are intuitive and discoverable
+
+## Extension Methods
+- Create extension methods for convenience functionality
+- Place extensions in appropriate namespaces
+- Use clear, descriptive method names
+- Avoid extending types you don't own unless providing clear value
+
+## Immutability
+- Prefer immutable data structures for public APIs
+- Use readonly properties where appropriate
+- Create defensive copies when exposing internal collections
+
+## Developer Experience Excellence
+- **Type Safety**: Strongly-typed APIs that prevent common mistakes
+- **Error Messages**: Detailed, actionable error messages with suggestions
+- **Discoverability**: Intuitive naming that guides developers to correct usage
+- **IDE Integration**: Attributes and hints for better tooling support
+
+## API Stability
+- Design APIs to be backward compatible by default
+- Avoid breaking changes in public interfaces
+- Use obsolete attributes when deprecating functionality
+
+## Blockchain API Patterns
+- **Timeout Configuration**: Provide configurable timeouts for network operations
+- **Retry Logic**: Include built-in retry policies for transient blockchain failures
+- **Event-Driven**: Support reactive patterns for real-time blockchain event subscriptions
+- **Connection Management**: Handle connection pooling and lifecycle for RPC endpoints
+- **Error Recovery**: Design graceful degradation for network failures and node outages

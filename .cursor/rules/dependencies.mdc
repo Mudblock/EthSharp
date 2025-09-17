@@ -1,0 +1,30 @@
+---
+description: Dependency management and package selection guidelines
+alwaysApply: true
+---
+
+# Dependency Management
+
+## Central Package Management
+- Use Central Package Management exclusively (no inline version specifications)
+- All package versions managed in Directory.Packages.props
+- Maintain consistent package versions across projects
+- Review and update dependencies regularly
+
+## Package Selection Criteria
+- Prefer .NET built-in types over third-party alternatives
+- Use System.Text.Json over Newtonsoft.Json for new code
+- Stick to approved cryptography libraries (BouncyCastle, NSec.Cryptography)
+- Choose packages with active maintenance and security audit history
+- Evaluate security implications and supply chain risks for all dependencies
+
+## Supply Chain Security
+- **Dependency Verification**: Verify package signatures and hashes before use
+- **Vulnerability Scanning**: Regular security scanning of all dependencies
+- **Minimal Dependencies**: Use only essential, well-audited packages
+- **Dependency Pinning**: Lock dependency versions for reproducible builds
+
+## Security Updates
+- Review and update dependencies regularly with security considerations
+- Document any breaking changes from dependency updates
+- Test dependency updates across all supported platforms before release

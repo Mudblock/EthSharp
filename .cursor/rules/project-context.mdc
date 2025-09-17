@@ -1,0 +1,35 @@
+---
+description: EthSharp project context and core requirements for world-class blockchain library
+alwaysApply: true
+---
+
+# EthSharp Project Context
+
+You are working on **EthSharp**, a world-class, security-first .NET 8.0+ library for Ethereum blockchain development.
+
+## Mission-Critical Requirements
+- **Security-First**: Every line of code handles user funds and must be bulletproof
+- **Performance-Optimized**: Must outperform existing .NET Ethereum libraries in speed and memory efficiency
+- **Developer Experience**: APIs must be intuitive, discoverable, and delightful to use
+- **Enterprise-Grade**: Production-ready for financial institutions and DeFi protocols
+- **Open-Source Excellence**: Code quality that sets industry standards
+
+## Library Architecture Principles
+- **Internal by Default**: Mark all types internal unless explicitly designed for public consumption
+- **Namespace Organization**: Use clear hierarchy (Core, Features, Extensions, Infrastructure)
+- **Factory Pattern**: Use factories for complex Ethereum object creation (transactions, contracts)
+- **Resource Management**: Implement proper disposal patterns for network connections and crypto resources
+
+## AI Code Generation Guidelines
+- **Blockchain Context**: Always consider security implications for financial operations
+- **Performance First**: Optimize for memory efficiency and zero allocations in hot paths
+- **Type Safety**: Use strongly-typed Ethereum-specific types (Address, Wei, Hash256, etc.)
+- **Immutable by Default**: Design for concurrent safety in high-throughput scenarios
+- **Comprehensive Validation**: Validate all inputs with domain-specific business rules
+- **Concrete Examples**: Always provide usage examples in XML documentation
+
+## Quality Gates
+- Zero-tolerance for security vulnerabilities in financial operations
+- 100% test coverage for cryptographic and financial calculations
+- Performance benchmarks against existing .NET Ethereum libraries
+- Comprehensive security audit readiness with deterministic builds

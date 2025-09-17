@@ -1,0 +1,50 @@
+---
+description: Library-specific standards for versioning, packaging, and distribution
+alwaysApply: true
+---
+
+# Library Standards
+
+## Versioning & Compatibility
+- **Semantic Versioning**: Strictly follow semantic versioning (MAJOR.MINOR.PATCH)
+- **Breaking Changes**: Only introduce breaking changes in major version releases
+- **Backward Compatibility**: Maintain binary compatibility within major versions
+- **API Stability**: Design APIs to be backward compatible by default
+- **Deprecation Policy**: Use ObsoleteAttribute for deprecated APIs with migration guidance
+- **Version Planning**: Plan version increments and communicate breaking changes clearly
+- **Migration Guides**: Provide comprehensive migration guides for major version changes
+- **Multi-targeting**: Use conditional compilation for platform-specific features
+
+## NuGet Packaging Standards
+- **Package Metadata**: Include comprehensive package descriptions, tags, and project URLs
+- **Icon & README**: Provide package icon and include README in NuGet package
+- **License Expression**: Use SPDX license expressions for better tooling support
+- **Symbol Packages**: Publish symbol packages for debugging support
+- **Package Validation**: Ensure packages pass NuGet package validation
+
+## Library Initialization Patterns
+- **Static Initialization**: Prefer static initialization for stateless libraries
+- **Factory Patterns**: Use factory methods for complex object creation
+- **Builder Pattern**: Implement builders for libraries requiring configuration
+- **Lazy Initialization**: Use lazy initialization for expensive resources
+
+## Configuration & Extensibility (Optional)
+- **Minimal Configuration**: Avoid complex configuration for simple libraries
+- **Extension Points**: Provide clear extension points for customization
+- **Static Factory Methods**: Prefer static methods over DI for simple object creation
+- **Configuration Validation**: Validate configuration at startup when needed
+
+## Platform Targeting & Distribution
+- **Target Frameworks**: Specify supported .NET target frameworks clearly (.NET 8.0+)
+- **Cross-Platform Compatibility**: Ensure compatibility across Windows, macOS, and Linux
+- **Conditional Compilation**: Use for platform-specific features with proper guards
+- **Platform Testing**: Test on all supported platforms and document limitations
+- **Distribution Channels**: Support NuGet as primary distribution mechanism
+- **Runtime Dependencies**: Minimize runtime dependencies and external requirements
+
+## Minimal API Surface
+- **Internal by Default**: Mark types internal unless explicitly designed for public consumption
+- **Focused Interfaces**: Keep public APIs minimal and focused on core functionality
+- **Extension Methods**: Use extension methods for convenience without expanding core API
+- **Obsolete APIs**: Remove obsolete APIs in major versions after deprecation period
+- **API Stability**: Avoid experimental APIs in stable releases

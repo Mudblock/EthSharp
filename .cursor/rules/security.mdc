@@ -1,0 +1,46 @@
+---
+description: Blockchain security and cryptographic safety guidelines for financial-grade software
+alwaysApply: true
+---
+
+# Security Standards
+
+## Cryptographic Security
+- **Constant-Time Operations**: Use constant-time comparison for sensitive data (signatures, private keys)
+- **Secure Random Generation**: Use cryptographically secure random number generators only
+- **Key Management**: Never log, cache, or expose private keys in any form
+- **Memory Protection**: Clear sensitive data from memory immediately after use
+- **Side-Channel Resistance**: Implement timing-attack resistant algorithms
+
+## Input Validation & Sanitization
+- **Zero Trust**: Validate all inputs, including internal API calls
+- **Address Validation**: Strict Ethereum address format and checksum validation
+- **Amount Validation**: Prevent overflow attacks on financial calculations
+- **Gas Limit Validation**: Protect against gas griefing attacks
+- **Transaction Validation**: Comprehensive transaction parameter verification
+
+## Error Handling Security
+- **Information Disclosure**: Never expose internal state in error messages
+- **Fail-Safe Defaults**: Secure defaults when operations fail
+- **Audit Trail**: Log security-relevant events for forensic analysis
+- **Rate Limiting**: Implement protection against denial of service
+- **Exception Safety**: Ensure failed operations leave system in consistent state
+
+## Secure Development Practices
+- **Code Reviews**: Require security review for all cryptographic and financial code
+- **Static Analysis**: Use security-focused static analysis tools (SonarAnalyzer, etc.)
+- **Threat Modeling**: Document threat models for critical security components
+- **Security Testing**: Include security test cases in automated test suites
+
+## Code Security Patterns
+- **Immutable by Default**: Prefer immutable data structures for security-critical code
+- **Defense in Depth**: Multiple layers of validation and protection
+- **Principle of Least Privilege**: Minimal permissions and access rights
+- **Secure Coding**: Follow OWASP guidelines for secure coding
+- **Threat Modeling**: Consider attack vectors in design decisions
+
+## Ethereum-Specific Security
+- **Private Key Safety**: Never expose private keys in logs, exceptions, or debugging
+- **Transaction Validation**: Validate all transaction parameters before signing
+- **Nonce Management**: Ensure proper nonce handling to prevent replay attacks
+- **Smart Contract Interaction**: Validate contract addresses and function signatures

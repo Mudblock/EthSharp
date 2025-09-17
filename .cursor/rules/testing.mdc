@@ -1,0 +1,40 @@
+---
+description: Comprehensive testing standards using xUnit framework
+alwaysApply: true
+---
+
+# Testing Standards
+
+## xUnit Best Practices
+- Use descriptive test method names: `Method_Condition_ExpectedResult`
+- Follow Arrange-Act-Assert pattern consistently
+- Create one logical assertion per test method
+- Use Theory and InlineData for parameterized tests
+- Implement proper test class organization
+
+## Test Coverage Requirements
+- Generate unit tests for ALL new functionality (no exceptions)
+- Include both positive and negative test cases
+- Test edge cases, boundary conditions, and error scenarios
+- Focus on meaningful tests that verify business logic and contracts
+- Test all public API contracts with multiple scenarios
+
+## Integration Testing
+- Use IAsyncLifetime for proper test setup/cleanup
+- Create focused integration tests for critical paths
+- Use TestContainers or similar for external dependencies
+- Isolate integration tests from unit tests
+- Mock external services appropriately
+
+## Test Organization
+- Group related tests in the same test class
+- Use test collections for shared test context
+- Name test classes clearly: `{ClassName}Tests`
+- Keep test methods focused and single-purpose
+- Use meaningful test data and avoid magic numbers
+
+## Performance Testing
+- Include benchmarks for performance-critical code
+- Use BenchmarkDotNet for reliable performance measurement
+- Test memory allocation patterns
+- Validate performance regression prevention

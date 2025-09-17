@@ -1,0 +1,56 @@
+---
+description: Performance optimization guidelines for high-performance library code
+alwaysApply: true
+---
+
+# Performance Optimization
+
+## Memory Management
+- Use Span<T> and Memory<T> for performance-critical operations
+- Leverage ArrayPool<T> for large temporary allocations
+- Avoid unnecessary allocations in hot paths
+- Consider stackalloc for small, short-lived arrays
+- Prefer struct over class for small, immutable data
+
+## Collection Efficiency
+- Choose appropriate collection types for the use case
+- Pre-allocate collections when size is known
+- Use efficient LINQ patterns, avoid multiple enumerations
+- Consider ReadOnlySpan<T> for read-only data processing
+- Use StringBuilder for multiple string concatenations
+
+## Async Programming & Concurrency
+- Always use async/await with CancellationToken parameters
+- Avoid blocking async calls (no .Result or .Wait())
+- Use ConfigureAwait(false) in library code when appropriate
+- Implement proper async disposal patterns
+- Design for thread safety in high-concurrency scenarios
+- Ensure initialization patterns are thread-safe
+
+## Algorithm Efficiency
+- Avoid O(n²) complexity where possible
+- Profile performance-critical algorithms with BenchmarkDotNet
+- Include benchmarks for optimization validation
+- Use appropriate data structures (Dictionary vs List vs HashSet)
+- Consider caching for expensive computations (with expiration policies)
+
+## Blockchain-Specific Optimizations
+- **Batch Operations**: Group multiple blockchain operations for efficiency
+- **Connection Pooling**: Reuse HTTP connections for RPC calls
+- **Response Caching**: Cache immutable blockchain data (blocks, transactions)
+- **Parallel Processing**: Process independent operations concurrently
+- **Gas Optimization**: Minimize gas costs in transaction construction
+
+## High-Frequency Operations
+- **Zero-Allocation Paths**: Use Span<T>/Memory<T> in hot paths
+- **Object Pooling**: Pool objects for high-frequency scenarios
+- **JIT Optimization**: Structure code for optimal JIT compilation
+- **CPU Cache Efficiency**: Organize data structures for cache locality
+- **Vectorization**: Use SIMD operations where applicable
+
+## Ethereum-Specific Performance Patterns
+- **Address Processing**: Use stackalloc for temporary address manipulations
+- **Hash Computations**: Cache expensive Keccak256 calculations when safe
+- **ABI Encoding/Decoding**: Pre-allocate buffers for known data sizes
+- **Transaction Building**: Use StringBuilder for transaction data assembly
+- **RPC Response Handling**: Stream JSON parsing for large responses

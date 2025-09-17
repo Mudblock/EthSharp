@@ -1,0 +1,20 @@
+---
+description: Library auditability and open source governance standards
+alwaysApply: true
+---
+
+# Compliance & Auditability Standards
+
+## Code Auditability
+- **Deterministic Builds**: Ensure reproducible builds for security audits
+- **Version Traceability**: Tag all releases with complete dependency manifests
+- **Change Documentation**: Document all changes affecting security or financial calculations
+- **Code Signing**: Sign all releases and verify signatures in CI/CD
+- **Vulnerability Disclosure**: Clear process for reporting and handling security issues
+
+## Open Source Governance
+- **License Compatibility**: Verify all dependencies have compatible licenses
+- **Contributor Agreements**: Clear contribution guidelines and license agreements
+- **Security Disclosure**: Responsible security vulnerability disclosure process
+- **Code Standards**: Maintain consistent coding standards across contributions
+- **Community Guidelines**: Clear code of conduct and contribution guidelines

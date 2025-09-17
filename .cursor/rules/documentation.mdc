@@ -1,0 +1,34 @@
+---
+description: XML documentation and IntelliSense standards for public APIs
+alwaysApply: true
+---
+
+# Documentation Standards
+
+## XML Documentation Requirements
+- Include comprehensive XML documentation for all public APIs
+- Add `<summary>` tags with clear, concise descriptions
+- Document all parameters with `<param>` tags
+- Document return values with `<returns>` tags
+- Document exceptions with `<exception>` tags
+
+## IntelliSense Optimization
+- Write documentation that enhances developer experience
+- Use proper cross-references with `<see cref=""/>` tags
+- Include `<example>` sections for complex APIs
+- Provide meaningful `<remarks>` for additional context
+- Use `<value>` tags for properties
+
+## Code Examples
+- Include code examples in documentation where helpful
+- Use realistic, compilable examples
+- Show common usage patterns
+- Demonstrate best practices in examples
+- Keep examples focused and relevant
+
+## Documentation Quality
+- Write clear, professional language
+- Avoid redundant or obvious documentation
+- Focus on intent and usage rather than implementation
+- Update documentation when APIs change
+- Review documentation for accuracy and clarity
